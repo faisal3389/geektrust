@@ -1,4 +1,46 @@
 <app-header></app-header>
-<p>
-  home works!
-</p>
+<div flex>
+  <h2>Select Planets you want to search in:</h2>
+</div>
+
+<div>
+  <span>
+    <h3>Destination: 1</h3>
+    <mat-form-field>
+      <mat-select placeholder="Select Planet">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let planet of planets" [value]="planet">{{planet}}</mat-option>
+      </mat-select>
+    </mat-form-field>    
+  </span>
+  
+  <span>
+    <h3>Destination: 2</h3>
+    <mat-form-field>
+      <mat-select placeholder="Select Planet">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let planet of planets" [value]="planet">{{planet}}</mat-option>
+      </mat-select>
+    </mat-form-field>    
+  </span>
+
+  <span>
+    <h3>Destination: 3</h3>
+    <mat-form-field>
+      <mat-select placeholder="Select Planet">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let planet of planets" [value]="planet">{{planet}}</mat-option>
+      </mat-select>
+    </mat-form-field>    
+  </span>
+
+  <span>
+    <h3>Destination: 4</h3>
+    <mat-form-field>
+      <mat-select placeholder="Select Planet">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let planet of planets" [value]="planet">{{planet}}</mat-option>
+      </mat-select>
+    </mat-form-field>    
+  </span>
+</div>
