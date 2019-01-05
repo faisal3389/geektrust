@@ -1,6 +1,4 @@
-h3 {
-    /* display: inline; */
-}
-mat-form-field {
-    /* float: left; */
+.dropdowns {
+    width: 50%;
+    float: left;
 }

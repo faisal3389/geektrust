@@ -16,7 +16,7 @@ export class FalconeServiceService {
   }
 
   getVehicles() {
-    return this.http.get('https://findfalcone.herokuapp.com/vehicles');
+    return this.http.get<Object[]>('https://findfalcone.herokuapp.com/vehicles');
   }
 
   getToken() {
@@ -38,7 +38,6 @@ export class FalconeServiceService {
         'Content-Type': 'application/json'
       })
     };
-    // this.getToken().subscribe(data => this.token = data.token);
     return this.getToken().pipe(
       switchMap(tokenData => {
         this.token = tokenData['token'];
@@ -51,11 +50,4 @@ export class FalconeServiceService {
       })
     )
   }
-
-  
 }
-
-
-// forkJoin
-//       body.token = token;
-//       this.http.post<any>('https://findfalcone.herokuapp.com/find', {}, httpOptions))

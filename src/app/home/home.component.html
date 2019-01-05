@@ -3,7 +3,7 @@
   <h2>Select Planets you want to search in:</h2>
 </div>
 
-<div>
+<div class='dropdowns'>
   <span>
     <h3>Destination: 1</h3>
     <mat-form-field>
@@ -48,5 +48,6 @@
 </div>
 
 <div>
-  <button mat-raised-button color="primary" (click)="findFalcone()">Find Falcone</button>
+  <p>Time Taken: 200</p>
+  <button [disabled]="disableFind" mat-raised-button color="primary" (click)="findFalcone()">Find Falcone</button>
 </div>
