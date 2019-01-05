@@ -12,7 +12,7 @@ export class FalconeServiceService {
   constructor(private http: HttpClient) { }
 
   getPlanets() {
-    return this.http.get('https://findfalcone.herokuapp.com/planets');
+    return this.http.get<Object[]>('https://findfalcone.herokuapp.com/planets');
   }
 
   getVehicles() {

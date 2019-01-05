@@ -1,4 +1,13 @@
 <app-header></app-header>
-<p>
-  result works!
-</p>
+
+<div *ngIf="isSuccessfull">
+  <h2>Success! Congratulations on finding falcone</h2>
+  <p>Time taken: {{time}}</p>
+  <p>Planet found: {{planet}}</p>
+</div>
+
+<div *ngIf="!isSuccessfull">
+  <h2>Falcone not found, please try again</h2>
+</div>
+
+<button [routerLink]="['/home']" mat-raised-button color="primary">Start Again</button>

@@ -9,7 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './header/header.component';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { FalconeServiceService } from './falcone-service.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -37,13 +39,14 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSelectModule,
+    MatButtonModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
     )
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ FalconeServiceService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
