@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ResultComponent } from './result/result.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,10 +27,13 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ResultComponent
+    ResultComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
