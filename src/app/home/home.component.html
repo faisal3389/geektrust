@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (resetClicked)="reset()"></app-header>
 <div flex>
   <h2>Select Planets you want to search in:</h2>
 </div>
@@ -7,9 +7,9 @@
   <span>
     <h3>Destination: 1</h3>
     <mat-form-field>
-      <mat-select placeholder="Select Planet" (selectionChange)="planetSelected(1, $event)">
+      <mat-select #dest1 placeholder="Select Planet" (selectionChange)="planetSelected(1, $event)">
         <mat-option>None</mat-option>
-        <mat-option *ngFor="let planet of unselectedPlanetNames" [value]="planet">
+        <mat-option *ngFor="let planet of selectedPlanets['d1']" [value]="planet">
           {{planet}}
         </mat-option>
       </mat-select>
@@ -19,9 +19,9 @@
   <span>
     <h3>Destination: 2</h3>
     <mat-form-field>
-      <mat-select placeholder="Select Planet" (selectionChange)="planetSelected(2, $event)">
+      <mat-select #dest2 placeholder="Select Planet" (selectionChange)="planetSelected(2, $event)">
         <mat-option>None</mat-option>
-        <mat-option *ngFor="let planet of unselectedPlanetNames" [value]="planet">{{planet}}</mat-option>
+        <mat-option *ngFor="let planet of selectedPlanets['d2']" [value]="planet">{{planet}}</mat-option>
       </mat-select>
     </mat-form-field>    
   </span>
@@ -29,9 +29,9 @@
   <span>
     <h3>Destination: 3</h3>
     <mat-form-field>
-      <mat-select placeholder="Select Planet" (selectionChange)="planetSelected(3, $event)">
+      <mat-select #dest3 placeholder="Select Planet" (selectionChange)="planetSelected(3, $event)">
         <mat-option>None</mat-option>
-        <mat-option *ngFor="let planet of unselectedPlanetNames" [value]="planet">{{planet}}</mat-option>
+        <mat-option *ngFor="let planet of selectedPlanets['d3']" [value]="planet">{{planet}}</mat-option>
       </mat-select>
     </mat-form-field>    
   </span>
@@ -39,9 +39,9 @@
   <span>
     <h3>Destination: 4</h3>
     <mat-form-field>
-      <mat-select placeholder="Select Planet" (selectionChange)="planetSelected(4, $event)">
+      <mat-select #dest4 placeholder="Select Planet" (selectionChange)="planetSelected(4, $event)">
         <mat-option>None</mat-option>
-        <mat-option *ngFor="let planet of unselectedPlanetNames" [value]="planet">{{planet}}</mat-option>
+        <mat-option *ngFor="let planet of selectedPlanets['d4']" [value]="planet">{{planet}}</mat-option>
       </mat-select>
     </mat-form-field>    
   </span>
